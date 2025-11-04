@@ -1,6 +1,9 @@
+// /components/About.tsx (既存のファイルを更新)
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,9 +61,8 @@ export default function About() {
                     className="pl-6 font-['Noto_Sans_JP'] text-lg font-light leading-relaxed"
                     style={{ color: "#7A6B5A" }}
                   >
-                    Born in Tokyo, Yuki Tanaka embodies the aesthetics of
-                    contemporary Japan through fashion modeling. Her work merges
-                    traditional elegance with modern minimalism.
+                    DMC Photo Studioは、東京を拠点とした写真スタジオです。
+                    お客様の大切な記念日や人生の節目を、プロフェッショナルな技術と温かいおもてなしで記録いたします。
                   </p>
                 </div>
 
@@ -73,10 +75,9 @@ export default function About() {
                     className="pl-6 font-['Noto_Sans_JP'] text-lg font-light leading-relaxed"
                     style={{ color: "#7A6B5A" }}
                   >
-                    With over 6 years of experience, she has collaborated with
-                    renowned Japanese fashion houses and international
-                    magazines, bringing a unique perspective to editorial and
-                    commercial photography.
+                    アニバーサリー撮影から七五三、成人式、ウェディングまで、
+                    幅広いシーンに対応。経験豊富なスタッフが、お客様一人ひとりに寄り添い、
+                    最高の一枚を残すお手伝いをいたします。
                   </p>
                 </div>
 
@@ -87,25 +88,7 @@ export default function About() {
                         className="font-['Crimson_Text'] text-xl font-normal tracking-wide"
                         style={{ color: "#8B7355" }}
                       >
-                        Experience
-                      </h3>
-                      <div
-                        className="h-px w-8"
-                        style={{ backgroundColor: "#D4C4B0" }}
-                      ></div>
-                      <p
-                        className="font-['Noto_Sans_JP'] font-light"
-                        style={{ color: "#9B8C7A" }}
-                      >
-                        6+ Years Professional
-                      </p>
-                    </div>
-                    <div className="space-y-3">
-                      <h3
-                        className="font-['Crimson_Text'] text-xl font-normal tracking-wide"
-                        style={{ color: "#8B7355" }}
-                      >
-                        Based
+                        Location
                       </h3>
                       <div
                         className="h-px w-8"
@@ -118,7 +101,40 @@ export default function About() {
                         Tokyo, Japan
                       </p>
                     </div>
+                    <div className="space-y-3">
+                      <h3
+                        className="font-['Crimson_Text'] text-xl font-normal tracking-wide"
+                        style={{ color: "#8B7355" }}
+                      >
+                        Open
+                      </h3>
+                      <div
+                        className="h-px w-8"
+                        style={{ backgroundColor: "#D4C4B0" }}
+                      ></div>
+                      <p
+                        className="font-['Noto_Sans_JP'] font-light"
+                        style={{ color: "#9B8C7A" }}
+                      >
+                        10:00 - 18:00
+                      </p>
+                    </div>
                   </div>
+                </div>
+
+                {/* 詳細ページへのリンク */}
+                <div className="pt-8">
+                  <Link
+                    href="/about"
+                    className="group inline-flex items-center font-['Noto_Sans_JP'] text-sm font-light transition-all duration-300 hover:font-normal"
+                    style={{ color: "#9B8C7A" }}
+                  >
+                    <span className="mr-2">詳しく見る</span>
+                    <ArrowRight
+                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2"
+                      style={{ color: "#D4C4B0" }}
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -130,8 +146,8 @@ export default function About() {
             >
               <div className="relative">
                 <img
-                  src="https://readdy.ai/api/search-image?query=Japanese%20fashion%20model%20portrait%20photography%2C%20soft%20natural%20lighting%20with%20warm%20beige%20tones%2C%20minimalist%20aesthetic%2C%20elegant%20model%20in%20neutral%20colors%2C%20serene%20expression%2C%20contemporary%20Japanese%20photography%20style%2C%20clean%20composition%20with%20natural%20textures%20and%20gentle%20warm%20lighting&width=500&height=700&seq=japanese-about-1&orientation=portrait"
-                  alt="Yuki Tanaka Portrait"
+                  src="/kimono/1.webp"
+                  alt="DMC Photo Studio"
                   className="h-auto w-full object-cover shadow-lg"
                   loading="lazy"
                 />
@@ -150,7 +166,7 @@ export default function About() {
                   className="font-['Noto_Sans_JP'] text-sm font-light uppercase tracking-[0.2em]"
                   style={{ color: "#A0937D" }}
                 >
-                  Portrait Session
+                  DMC Photo Studio
                 </p>
               </div>
             </div>
